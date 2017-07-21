@@ -1,0 +1,24 @@
+</p>
+
+<h1>Two Factor Authentication</h1>
+<p>Scan the following QR code using the Google Authenticator (or other TOTP compatible) app.</p>
+<p><img src="{{ qrcode_url }}"></p>
+<p>Alternatively, you can manually enter the following secret:</p>
+<code>{{ secret }}</code>
+<p>Once you have set up the new account on your app, enter a code to ensure everything is working OK:</p>
+<form method="post" action="{{ action }}">
+    <input type="text" name="simple_2fa_totp" maxlength="6" style="
+        width: 100px;
+        border: 1px solid #ddd; font-size: 18px;
+        box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+        background-color: #fff;
+        color: #32373c;
+        outline: 0;
+        padding: 3px 5px;
+    ">
+
+    <input type="submit" value="Log In" class="button button-primary">
+</form>
+<p><strong>{{ enable_error }}</strong></p>
+
+<p>

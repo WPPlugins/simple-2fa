@@ -1,0 +1,12 @@
+<strong>ERROR</strong>: The 2FA Code was not valid.
+
+<script>
+window.wpOnload = function() {
+    document.loginform.user_login.value = '{{ log }}';
+    document.loginform.user_pass.value = '{{ pwd }}';
+
+    setTimeout(function() {
+        document.loginform.simple_2fa_totp.focus();
+    }, 200);
+};
+</script>

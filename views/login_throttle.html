@@ -1,0 +1,9 @@
+<strong>ERROR</strong>: There have been too many unsuccessful login attempts.<br>
+Please wait <strong>{{ throttle_time }}</strong> before trying again.
+
+<script>
+window.wpOnload = function() {
+    document.loginform.user_login.value = '{{ log }}';
+    document.loginform.user_pass.value = '{{ pwd }}';
+};
+</script>
